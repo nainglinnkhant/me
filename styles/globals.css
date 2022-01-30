@@ -1,16 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+     .btn {
+          @apply border-2 border-black dark:border-gray-200 px-4 py-2 lg:px-5 lg:py-3 rounded-md hover:text-gray-500 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-500 ease-in-out;
+     }
+     .paragraph {
+          @apply tracking-wide leading-7;
+     }
+     .wrapper {
+          @apply container mx-auto px-10 lg:px-24 xl:px-32 2xl:px-56;
+     }
+     .text-secondary {
+          @apply text-gray-600 dark:text-gray-400;
+     }
+     .theme {
+          @apply bg-gray-50 dark:bg-dark dark:text-gray-200 transition-colors duration-300 ease-in-out;
+     }
+}
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+     padding: 0;
+     margin: 0;
+     font-family: 'Inter', sans-serif !important;
+     scroll-behavior: smooth;
 }
-
+::-webkit-scrollbar {
+     width: 8px;
+     height: 8px;
+}
+::-webkit-scrollbar-thumb {
+     background-color: rgb(156 163 175);
+     border-radius: 5px;
+}
 a {
-  color: inherit;
-  text-decoration: none;
+     text-decoration: none;
+     cursor: pointer;
 }
-
-* {
-  box-sizing: border-box;
+.section-heading {
+     font-size: clamp(24px, 5vw, 30px);
+     text-align: center;
+     font-weight: 700;
+     margin-bottom: 1.25rem;
+}
+.article-heading {
+     font-size: clamp(24px, 5vw, 30px);
+     font-weight: 700;
+}
+.menu-btn {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 23px;
+     cursor: pointer;
+     transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+     width: 25px;
+     height: 3.3px;
+     background: #000000;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+     transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+     content: '';
+     position: absolute;
+     width: 30px;
+     height: 3.3px;
+     background: #000000;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+     transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+     transform: translateY(-10px);
+}
+.menu-btn__burger::after {
+     transform: translateY(10px);
+}
+.menu-btn.open .menu-btn__burger {
+     transform: translateX(-50px);
+     background: transparent;
+     box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+     transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+     transform: rotate(-45deg) translate(35px, 35px);
+}
+.slide-in-enter-active {
+     animation: slide-in 0.4s linear forwards;
+}
+.slide-in-exit-active {
+     animation: slide-in 0.4s linear reverse forwards;
+}
+@keyframes slide-in {
+     0% {
+          transform: translateX(100%);
+     }
+     50% {
+          transform: translateX(50%);
+     }
+     100% {
+          transform: translateX(0%);
+     }
+}
+.fade-down-enter-active {
+     animation: fade-down 0.4s linear forwards;
+}
+@keyframes fade-down {
+     0% {
+          transform: translateY(-100%);
+          opacity: 0;
+     }
+     50% {
+          transform: translateY(-50%);
+          opacity: 0.5;
+     }
+     100% {
+          transform: translateY(0%);
+          opacity: 1;
+     }
+}
+.fade-up-enter-active {
+     animation: fade-up 0.4s linear forwards;
+}
+@keyframes fade-up {
+     0% {
+          transform: translateY(100%);
+          opacity: 0;
+     }
+     50% {
+          transform: translateY(50%);
+          opacity: 0.5;
+     }
+     100% {
+          transform: translateY(0%);
+          opacity: 1;
+     }
+}
+.filter-html5 {
+     filter: invert(61%) sepia(72%) saturate(6508%) hue-rotate(348deg) brightness(93%) contrast(91%);
+}
+.filter-css3 {
+     filter: invert(34%) sepia(79%) saturate(837%) hue-rotate(171deg) brightness(94%) contrast(95%);
+}
+.filter-javascript {
+     filter: invert(85%) sepia(55%) saturate(840%) hue-rotate(341deg) brightness(106%) contrast(94%);
+}
+.filter-bootstrap {
+     filter: invert(38%) sepia(8%) saturate(4911%) hue-rotate(224deg) brightness(91%) contrast(83%);
+}
+.filter-tailwindcss {
+     filter: invert(59%) sepia(77%) saturate(3401%) hue-rotate(151deg) brightness(99%) contrast(95%);
+}
+.filter-react {
+     filter: invert(75%) sepia(26%) saturate(870%) hue-rotate(155deg) brightness(97%) contrast(104%);
+}
+.filter-vue {
+     filter: invert(62%) sepia(82%) saturate(274%) hue-rotate(101deg) brightness(90%) contrast(88%);
+}
+.filter-next {
+     filter: invert(0%) sepia(83%) saturate(12%) hue-rotate(280deg) brightness(94%) contrast(100%);
+}
+.filter-node {
+     filter: invert(41%) sepia(78%) saturate(471%) hue-rotate(71deg) brightness(100%) contrast(86%);
+}
+.filter-express {
+     filter: invert(0%) sepia(83%) saturate(12%) hue-rotate(280deg) brightness(94%) contrast(100%);
+}
+.filter-mongodb {
+     filter: invert(72%) sepia(14%) saturate(7344%) hue-rotate(71deg) brightness(82%) contrast(58%);
+}
+.filter-firebase {
+     filter: invert(82%) sepia(52%) saturate(1213%) hue-rotate(335deg) brightness(107%)
+          contrast(102%);
+}
+.icon-filter {
+     filter: invert(31%) sepia(13%) saturate(657%) hue-rotate(175deg) brightness(96%) contrast(88%);
+}
+.icon-filter-dark {
+     filter: invert(66%) sepia(11%) saturate(288%) hue-rotate(179deg) brightness(96%) contrast(92%);
 }
