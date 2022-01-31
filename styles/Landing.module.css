@@ -1,9 +1,9 @@
 .landing h1 {
-     font-size: clamp(20px, 2.5vw, 24px);
+     font-size: clamp(17px, 2.5vw, 24px);
      font-weight: 500;
 }
 .landing h2 {
-     font-size: clamp(40px, 7vw, 70px);
+     font-size: clamp(35px, 7vw, 70px);
      font-weight: 700;
 }
 .landing p {

@@ -25,8 +25,8 @@ export default function Navbar() {
 
      return (
           <CSSTransition in={showNavbar} timeout={600} classNames='fade-down' mountOnEnter>
-               <nav className='fixed top-0 left-0 right-0 py-7 theme z-40'>
-                    <div className='container mx-auto px-10 lg:px-24 xl:px-32 2xl:px-56 flex justify-between'>
+               <nav className='fixed top-0 left-0 right-0 py-5 md:py-7 theme z-40'>
+                    <div className='container mx-auto px-8 lg:px-24 xl:px-32 2xl:px-56 flex justify-between'>
                          <div className='font-semibold text-lg'>
                               <Link href='/'>Naing Linn Khant</Link>
                          </div>
@@ -48,22 +48,24 @@ export default function Navbar() {
                                    className={`${styles['menu-mobile']} theme absolute top-0 right-0 bottom-0 left-0 w-100 h-screen z-10`}
                               >
                                    <ul className='text-center pt-40'>
-                                        <NavItem path='/' mobile>
-                                             <span onClick={closeMobileMenu}>
-                                                  <Link href='/'>Home</Link>
-                                             </span>
+                                        <NavItem path='/' closeMobileMenu={closeMobileMenu} mobile>
+                                             <Link href='/'>Home</Link>
                                         </NavItem>
 
-                                        <NavItem path='/projects' mobile>
-                                             <span onClick={closeMobileMenu}>
-                                                  <Link href='/projects'>Projects</Link>
-                                             </span>
+                                        <NavItem
+                                             path='/projects'
+                                             closeMobileMenu={closeMobileMenu}
+                                             mobile
+                                        >
+                                             <Link href='/projects'>Projects</Link>
                                         </NavItem>
 
-                                        <NavItem path='/blog' mobile>
-                                             <span onClick={closeMobileMenu}>
-                                                  <Link href='/blog'>Blog</Link>
-                                             </span>
+                                        <NavItem
+                                             path='/blog'
+                                             closeMobileMenu={closeMobileMenu}
+                                             mobile
+                                        >
+                                             <Link href='/blog'>Blog</Link>
                                         </NavItem>
 
                                         <li>

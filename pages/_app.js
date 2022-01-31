@@ -11,16 +11,20 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
      const [showSpinner, setShowSpinner] = useState(true)
 
-     const handleHideSpinner = () => setShowSpinner(false)
-
      useEffect(() => {
+          const handleHideSpinner = () => setShowSpinner(false)
+
           window.addEventListener('load', handleHideSpinner)
 
           return () => window.removeEventListener('load', handleHideSpinner)
      }, [])
 
      useEffect(() => {
-          Aos.init({ duration: 600, once: true, easing: 'ease-out', offset: 300 })
+          if (document.readyState === 'complete') setShowSpinner(false)
+     }, [])
+
+     useEffect(() => {
+          Aos.init({ duration: 600, once: true, easing: 'ease-out', offset: 200 })
      }, [])
 
      return (

@@ -12,7 +12,8 @@ import styles from '../../styles/FeaturedProjects.module.css'
 const projects = [
      {
           name: 'Nextify',
-          description: 'A front-end simulation of real-world e-commerce app built with next.js.',
+          description:
+               'A front-end simulation of real-world e-commerce app (built with next.js and firebase).',
           mockup: n3xtifyMockup,
           mobileMockup: n3xtifyMobileMockup,
           github: 'https://github.com/nainglinnkhant/n3xtify',

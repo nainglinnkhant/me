@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +11,7 @@
           @apply tracking-wide leading-7;
      }
      .wrapper {
-          @apply container mx-auto px-10 lg:px-24 xl:px-32 2xl:px-56;
+          @apply container mx-auto px-8 lg:px-24 xl:px-32 2xl:px-56;
      }
      .text-secondary {
           @apply text-gray-600 dark:text-gray-400;

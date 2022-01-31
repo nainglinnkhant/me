@@ -17,7 +17,7 @@ export default function About() {
 
                     <div className='basis-full md:basis-2/5'>
                          <div className='relative h-64'>
-                              <Image src={programmer} alt='Programmer' layout='fill' priority />
+                              <Image src={programmer} alt='Programmer' layout='fill' />
                          </div>
                     </div>
                </div>

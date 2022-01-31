@@ -5,7 +5,7 @@ import externalLink from '../../public/general/external-link.svg'
 
 export default function Project({ project }) {
      return (
-          <div className='shadow-md'>
+          <div className='shadow-md dark:shadow-md-dark'>
                <a href={project.link} target='__blank' rel='noopener noreferrer'>
                     <div className='relative'>
                          <div className='absolute w-full h-full bg-dark opacity-20 dark:z-10 dark:hover:bg-transparent transition-all duration-500 ease-in-out'></div>

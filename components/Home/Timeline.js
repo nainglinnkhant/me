@@ -31,7 +31,9 @@ export default function Timeline() {
                                    } lg:mx-10 mt-10`}
                                    key={index}
                               >
-                                   <div className={`${styles.content} shadow-neuro`}>
+                                   <div
+                                        className={`${styles.content} shadow-neuro dark:shadow-neuro-dark`}
+                                   >
                                         <i className={`${el.icon} theme shadow-md`}></i>
                                         <h3 className='font-semibold mb-2'>{el.description}</h3>
                                         <p className='text-secondary'>{el.time}</p>

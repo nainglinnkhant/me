@@ -1,26 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import DocumentHead from '../../components/Layout/DocumentHead'
 import articles from '../../articles-test.json'
 
 export default function ArticleDetails({ article }) {
      const [scrolled, setScrolled] = useState(0)
 
-     const handleProgressOnScroll = () => {
-          const windowScroll =
-               window.scrollY || document.body.scrollTop || document.documentElement.scrollTop
+     const handleProgressOnScroll = useCallback(() => {
+          const windowScroll = document.body.scrollTop || document.documentElement.scrollTop
 
           const windowHeight =
                document.documentElement.scrollHeight - document.documentElement.clientHeight
 
           const scrolledAmount = `${(windowScroll / windowHeight) * 100}%`
           setScrolled(scrolledAmount)
-     }
+     }, [])
 
      useEffect(() => {
           window.addEventListener('scroll', handleProgressOnScroll)
 
           return () => window.removeEventListener('scroll', handleProgressOnScroll)
-     }, [])
+     }, [handleProgressOnScroll])
 
      const handleScrollToTop = () => {
           window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -43,7 +42,7 @@ export default function ArticleDetails({ article }) {
                </button>
 
                <div className='wrapper'>
-                    <div className='flex flex-col items-center py-28'>
+                    <div className='flex flex-col items-center py-24 md:py-28'>
                          <div className='w-full md:w-3/4'>
                               <h2 className='article-heading mb-4'>{article.name}</h2>
 
