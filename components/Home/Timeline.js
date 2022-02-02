@@ -8,7 +8,7 @@ const timeline = [
      },
      {
           description: 'University of Technology - Yatanarpon Cyber City',
-          time: '2017-present',
+          time: '2017-2020',
           icon: 'fas fa-graduation-cap',
      },
 ]
