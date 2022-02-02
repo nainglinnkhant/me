@@ -3,7 +3,7 @@
      font-weight: 500;
 }
 .landing h2 {
-     font-size: clamp(35px, 7vw, 70px);
+     font-size: clamp(37px, 7vw, 70px);
      font-weight: 700;
 }
 .landing p {
