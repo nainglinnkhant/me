@@ -31,7 +31,7 @@ export default function Contact() {
                     />
 
                     <IconLink
-                         link='https://www.facebook.com/nainglinn.khant.90'
+                         link='https://www.facebook.com/nainglinnkhnt'
                          linkClass='mx-3'
                          icon={facebook}
                          alt='My Facebook Profile'

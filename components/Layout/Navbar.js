@@ -84,9 +84,9 @@ export default function Navbar() {
                                    <Link href='/projects'>Projects</Link>
                               </NavItem>
 
-                              <NavItem path='/blog'>
+                              {/* <NavItem path='/blog'>
                                    <Link href='/blog'>Blog</Link>
-                              </NavItem>
+                              </NavItem> */}
 
                               <li>
                                    <ThemeToggleButton />

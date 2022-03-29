@@ -11,6 +11,24 @@ const timeline = [
           time: '2017-2020',
           icon: 'fas fa-graduation-cap',
      },
+     {
+          description: 'React Developer at MO',
+          time: '2022-present',
+          icon: 'fas fa-solid fa-briefcase',
+          content: () => (
+               <h3 className='font-semibold mb-2'>
+                    React Developer at&nbsp;
+                    <a
+                         href='https://www.mo.com.mm/'
+                         style={{ color: '#4cb849' }}
+                         target='_blank'
+                         rel='noopener noreferrer'
+                    >
+                         MO
+                    </a>
+               </h3>
+          ),
+     },
 ]
 
 export default function Timeline() {
@@ -35,7 +53,15 @@ export default function Timeline() {
                                         className={`${styles.content} shadow-neuro dark:shadow-neuro-dark`}
                                    >
                                         <i className={`${el.icon} theme shadow-md`}></i>
-                                        <h3 className='font-semibold mb-2'>{el.description}</h3>
+
+                                        {el.content && typeof el.content === 'function' ? (
+                                             el.content()
+                                        ) : (
+                                             <h3 className='font-semibold mb-2'>
+                                                  {el.description}
+                                             </h3>
+                                        )}
+
                                         <p className='text-secondary'>{el.time}</p>
                                    </div>
                               </div>
