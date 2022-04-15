@@ -9,10 +9,16 @@ export default function About() {
 
                <div className='flex flex-wrap gap-y-10 justify-center items-center'>
                     <p className='basis-full md:basis-3/5 paragraph'>
-                         Web developer with advanced JavaScript knowledge and inquisitive,
-                         open-minded, and responsible mentality. Able to efficiently write websites
-                         and web apps with Vue.js and React.js. I'm currently strengthening my
-                         Node.js and MongoDB knowledge.
+                         A JavaScript-based developer with an inquisitive,
+                         open-minded, and responsible mentality. My excitement lies in trying out new things and applying them in practical situations. I'm currently working as a full-time React Developer at&nbsp;
+                         <a
+                             href='https://www.mo.com.mm/'
+                             style={{ color: '#4cb849' }}
+                             target='_blank'
+                             rel='noopener noreferrer'
+                         >
+                             MO
+                         </a>.
                     </p>
 
                     <div className='basis-full md:basis-2/5'>

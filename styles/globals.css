@@ -152,6 +152,9 @@ a {
 .filter-css3 {
      filter: invert(34%) sepia(79%) saturate(837%) hue-rotate(171deg) brightness(94%) contrast(95%);
 }
+.filter-sass {
+     filter: invert(52%) sepia(30%) saturate(864%) hue-rotate(277deg) brightness(91%) contrast(84%);
+}
 .filter-javascript {
      filter: invert(85%) sepia(55%) saturate(840%) hue-rotate(341deg) brightness(106%) contrast(94%);
 }
@@ -163,6 +166,9 @@ a {
 }
 .filter-react {
      filter: invert(75%) sepia(26%) saturate(870%) hue-rotate(155deg) brightness(97%) contrast(104%);
+}
+.filter-react-native {
+    filter: invert(75%) sepia(26%) saturate(870%) hue-rotate(155deg) brightness(97%) contrast(104%);
 }
 .filter-vue {
      filter: invert(62%) sepia(82%) saturate(274%) hue-rotate(101deg) brightness(90%) contrast(88%);

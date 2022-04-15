@@ -3,11 +3,13 @@ import Image from 'next/image'
 const techs = [
      'HTML5',
      'CSS3',
+     'Sass',
      'Bootstrap',
      'TailwindCSS',
      'JavaScript',
      'Vue',
      'React',
+     'React-Native',
      'Next',
      'Node',
      'Express',
@@ -37,7 +39,7 @@ export default function Skills() {
                                    height='37px'
                                    className={`filter-${tech.toLowerCase()}`}
                               />
-                              <p className='mt-1 text-secondary'>{tech}</p>
+                              <p className='mt-1 text-secondary'>{tech.replace('-', ' ')}</p>
                          </div>
                     ))}
                </div>
