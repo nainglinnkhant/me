@@ -1,14 +1,14 @@
 .menu-large ul,
 .menu-mobile ul {
-     list-style-type: none;
+    list-style-type: none;
 }
 .menu-large li {
-     display: inline-block;
-     margin-left: 1rem;
-     margin-right: 1rem;
-     font-weight: 600;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 600;
 }
 .menu-mobile li {
-     margin-top: 3rem;
-     font-weight: 600;
+    margin-top: 3rem;
+    font-weight: 600;
 }

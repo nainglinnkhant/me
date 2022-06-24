@@ -7,18 +7,18 @@ import FeaturedProjects from '../components/Home/FeaturedProjects'
 import DocumentHead from '../components/Layout/DocumentHead'
 
 export default function Home() {
-     return (
-          <>
-               <DocumentHead title='Naing Linn Khant' content='Naing Linn Khant' />
+    return (
+        <>
+            <DocumentHead title='Naing Linn Khant' content='Naing Linn Khant' />
 
-               <main className='wrapper'>
-                    <Landing />
-                    <About />
-                    <Skills />
-                    <FeaturedProjects />
-                    <Timeline />
-                    <Contact />
-               </main>
-          </>
-     )
+            <main className='wrapper'>
+                <Landing />
+                <About />
+                <Skills />
+                <FeaturedProjects />
+                <Timeline />
+                <Contact />
+            </main>
+        </>
+    )
 }

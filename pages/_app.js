@@ -9,38 +9,38 @@ import Spinner from '../components/UI/Spinner'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-     const [showSpinner, setShowSpinner] = useState(true)
+    const [showSpinner, setShowSpinner] = useState(true)
 
-     useEffect(() => {
-          const handleHideSpinner = () => setShowSpinner(false)
+    useEffect(() => {
+        const handleHideSpinner = () => setShowSpinner(false)
 
-          window.addEventListener('load', handleHideSpinner)
+        window.addEventListener('load', handleHideSpinner)
 
-          return () => window.removeEventListener('load', handleHideSpinner)
-     }, [])
+        return () => window.removeEventListener('load', handleHideSpinner)
+    }, [])
 
-     useEffect(() => {
-          if (document.readyState === 'complete') setShowSpinner(false)
-     }, [])
+    useEffect(() => {
+        if (document.readyState === 'complete') setShowSpinner(false)
+    }, [])
 
-     useEffect(() => {
-          Aos.init({ duration: 600, once: true, easing: 'ease-out', offset: 200 })
-     }, [])
+    useEffect(() => {
+        Aos.init({ duration: 600, once: true, easing: 'ease-out', offset: 200 })
+    }, [])
 
-     return (
-          <>
-               {!showSpinner && (
-                    <ThemeProvider>
-                         <RouteProgress />
-                         <Navbar />
-                         <Component {...pageProps} />
-                         <Footer />
-                    </ThemeProvider>
-               )}
+    return (
+        <>
+            {!showSpinner && (
+                <ThemeProvider>
+                    <RouteProgress />
+                    <Navbar />
+                    <Component {...pageProps} />
+                    <Footer />
+                </ThemeProvider>
+            )}
 
-               {showSpinner && <Spinner />}
-          </>
-     )
+            {showSpinner && <Spinner />}
+        </>
+    )
 }
 
 export default MyApp

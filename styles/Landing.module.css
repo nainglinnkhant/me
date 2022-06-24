@@ -1,32 +1,32 @@
 .landing h1 {
-     font-size: clamp(17px, 2.5vw, 24px);
-     font-weight: 500;
+    font-size: clamp(17px, 2.5vw, 24px);
+    font-weight: 500;
 }
 .landing h2 {
-     font-size: clamp(37px, 7vw, 70px);
-     font-weight: 700;
+    font-size: clamp(37px, 7vw, 70px);
+    font-weight: 700;
 }
 .landing p {
-     font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(16px, 2vw, 20px);
 }
 .landing .chevrons-down {
-     -webkit-animation-duration: 2s;
-     animation-duration: 2s;
-     -webkit-animation-fill-mode: both;
-     animation-fill-mode: both;
-     -webkit-animation-timing-function: linear;
-     animation-timing-function: linear;
-     animation-iteration-count: infinite;
-     -webkit-animation-iteration-count: infinite;
-     -webkit-animation-name: bounce;
-     animation-name: bounce;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
 }
 @keyframes bounce {
-     0%,
-     100% {
-          transform: translateY(0);
-     }
-     50% {
-          transform: translateY(-15px);
-     }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
