@@ -112,40 +112,6 @@ a {
         transform: translateX(0%);
     }
 }
-.fade-down-enter-active {
-    animation: fade-down 0.4s linear forwards;
-}
-@keyframes fade-down {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(-50%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-.fade-up-enter-active {
-    animation: fade-up 0.4s linear forwards;
-}
-@keyframes fade-up {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(50%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
 .filter-html5 {
     filter: invert(61%) sepia(72%) saturate(6508%) hue-rotate(348deg) brightness(93%) contrast(91%);
 }
@@ -194,4 +160,30 @@ a {
 }
 .icon-filter-dark {
     filter: invert(66%) sepia(11%) saturate(288%) hue-rotate(179deg) brightness(96%) contrast(92%);
+}
+
+.projects > div:nth-child(1) {
+    animation: scaleUp 0.8s ease-out both;
+}
+.projects > div:nth-child(2) {
+    animation: scaleUp 0.8s ease-out 0.3s both;
+}
+.projects > div:nth-child(3) {
+    animation: scaleUp 0.8s ease-out 0.6s both;
+}
+.projects > div:nth-child(4) {
+    animation: scaleUp 0.8s ease-out 0.8s both;
+}
+.projects > div:nth-child(5) {
+    animation: scaleUp 0.8s ease-out 1s both;
+}
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

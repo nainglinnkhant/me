@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { CSSTransition } from 'react-transition-group'
 import { useTheme } from '../../context/ThemeContext'
 import chevronsDown from '../../public/general/chevrons-down.svg'
 import styles from '../../styles/Landing.module.css'

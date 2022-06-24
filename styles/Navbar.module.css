@@ -1,3 +1,19 @@
+.name,
+.menu-btn {
+    animation: fadeDown 1s ease-out both;
+}
+.menu-large li:nth-child(1),
+.menu-mobile ul li:nth-child(1) {
+    animation: fadeDown 0.5s ease-out 0.2s both;
+}
+.menu-large li:nth-child(2),
+.menu-mobile ul li:nth-child(2) {
+    animation: fadeDown 0.5s ease-out 0.4s both;
+}
+.menu-large li:nth-child(3),
+.menu-mobile ul li:nth-child(3) {
+    animation: fadeDown 0.5s ease-out 0.6s both;
+}
 .menu-large ul,
 .menu-mobile ul {
     list-style-type: none;
@@ -11,4 +27,14 @@
 .menu-mobile li {
     margin-top: 3rem;
     font-weight: 600;
+}
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
