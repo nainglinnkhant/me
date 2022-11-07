@@ -22,9 +22,7 @@ export default function Skills() {
         <div className='mb-36' data-aos='fade-up'>
             <h2 className='section-heading'>Technical Skills</h2>
 
-            <p className='paragraph text-center mb-8'>
-                Some technologies I have had experience with:
-            </p>
+            <p className='paragraph text-center mb-8'>Technologies I have had experience with:</p>
 
             <div className='flex flex-wrap gap-6 justify-center items-center'>
                 {techs.map((tech) => (

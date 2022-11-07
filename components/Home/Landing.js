@@ -12,10 +12,11 @@ export default function Landing() {
         >
             <h1 className='mb-5'>Hello, My name is Naing Linn Khant.</h1>
 
-            <h2 className='mb-5'>I build web related things.</h2>
+            <h2 className='mb-5'>I build frontend stuffs.</h2>
 
             <p className='mb-7'>
-                I'm a web developer, who loves to craft things with JavaScript, based in Yangon.
+                I'm a software developer, who loves to craft things with JavaScript, based in
+                Yangon.
             </p>
 
             <a

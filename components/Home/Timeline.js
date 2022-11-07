@@ -12,12 +12,12 @@ const timeline = [
         icon: 'fas fa-graduation-cap',
     },
     {
-        description: 'React Developer at MO',
-        time: '2022-present',
+        description: 'Software Engineer at MO',
+        time: 'Feb, 2022-present',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='font-semibold mb-2'>
-                React Developer at&nbsp;
+                Software Engineer at&nbsp;
                 <a
                     href='https://www.mo.com.mm/'
                     style={{ color: '#4cb849' }}

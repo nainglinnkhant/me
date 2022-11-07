@@ -9,7 +9,7 @@ export default function Contact() {
             <h2 className='section-heading'>Get in Touch</h2>
 
             <p className='paragraph mb-8 text-center'>
-                Wanna know more about my work? Got any question? Or just want to say hi? Go ahead.
+                Wanna know more about my work? Got any questions? Or just want to say hi? Go ahead.
             </p>
 
             <a

@@ -13,7 +13,7 @@ const projects = [
     {
         name: 'Nextify',
         description:
-            'A front-end simulation of real-world e-commerce app (built with next.js and firebase).',
+            'A front-end simulation of real-world e-commerce app (built with Next.js and Firebase).',
         mockup: n3xtifyMockup,
         mobileMockup: n3xtifyMobileMockup,
         github: 'https://github.com/nainglinnkhant/n3xtify',
@@ -22,7 +22,7 @@ const projects = [
     {
         name: 'Moviemissile',
         description:
-            'Movie info app with a variety of features (built with react.js and firebase).',
+            'Movie info app with a variety of features (built with React.js and Firebase).',
         mockup: mmMockup,
         mobileMockup: mmMobileMockup,
         github: 'https://github.com/nainglinnkhant/moviemissile',
@@ -38,7 +38,7 @@ export default function FeaturedProjects() {
             </h2>
 
             <p className='paragraph text-center' data-aos='fade-up'>
-                Some things I've built and I'm proud of:
+                Some things I've built:
             </p>
 
             {projects.map((project, index) => (
