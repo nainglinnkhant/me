@@ -11,17 +11,7 @@ export default function About() {
                 <p className='basis-full md:basis-3/5 paragraph'>
                     A JavaScript-based developer with an inquisitive, open-minded, and responsible
                     mentality. My excitement lies in trying out new things and applying them in
-                    practical situations. I'm currently working as a full-time Software Engineer
-                    at&nbsp;
-                    <a
-                        href='https://www.mo.com.mm/'
-                        style={{ color: '#4cb849' }}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        MO
-                    </a>
-                    .
+                    practical situations.
                 </p>
 
                 <div className='basis-full md:basis-2/5'>

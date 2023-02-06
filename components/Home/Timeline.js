@@ -13,7 +13,7 @@ const timeline = [
     },
     {
         description: 'Software Engineer at MO',
-        time: 'Feb, 2022-present',
+        time: 'Feb, 2022-Jan 2023',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='font-semibold mb-2'>
