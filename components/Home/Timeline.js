@@ -3,17 +3,17 @@ import styles from '../../styles/Timeline.module.css'
 const timeline = [
     {
         description: 'High School',
-        time: '2015-2017',
+        time: '2015 - 2017',
         icon: 'fas fa-graduation-cap',
     },
     {
         description: 'University of Technology - Yatanarpon Cyber City',
-        time: '2017-2020',
+        time: '2017 - 2020',
         icon: 'fas fa-graduation-cap',
     },
     {
         description: 'Software Engineer at MO',
-        time: 'Feb, 2022-Jan 2023',
+        time: 'Feb 2022 - Jan 2023',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='font-semibold mb-2'>
@@ -28,6 +28,11 @@ const timeline = [
                 </a>
             </h3>
         ),
+    },
+    {
+        description: 'Frontend Developer at Idea Offshore',
+        time: 'Feb 2023 - Present',
+        icon: 'fas fa-solid fa-briefcase',
     },
 ]
 
