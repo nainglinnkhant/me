@@ -21,7 +21,7 @@ const projects = [
         techs: ['React.js', 'Redux Toolkit', 'Bootstrap', 'Firebase'],
         image: movieMissile,
         github: 'https://github.com/nainglinnkhant/moviemissile',
-        link: 'https://moviemissile.netlify.app',
+        link: 'https://moviemissile.vercel.app',
     },
     {
         name: 'Recipe App',
@@ -29,7 +29,7 @@ const projects = [
         techs: ['Vue.js', 'Bootstrap', 'Firebase'],
         image: recipeApp,
         github: 'https://github.com/nainglinnkhant/recipe-app',
-        link: 'https://recipeapp12.netlify.app',
+        link: 'https://recipe-app-three-gamma.vercel.app/',
     },
     {
         name: 'Quizzy Quiz',
@@ -37,7 +37,7 @@ const projects = [
         techs: ['Vue.js', 'Bootstrap'],
         image: quizzyQuiz,
         github: 'https://github.com/nainglinnkhant/quizzy-quiz',
-        link: 'https://quizyquiz.netlify.app',
+        link: 'https://quizzy-quiz.vercel.app',
     },
     {
         name: 'Trello Clone',

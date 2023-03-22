@@ -26,7 +26,7 @@ const projects = [
         mockup: mmMockup,
         mobileMockup: mmMobileMockup,
         github: 'https://github.com/nainglinnkhant/moviemissile',
-        link: 'https://moviemissile.netlify.app',
+        link: 'https://moviemissile.vercel.app',
     },
 ]
 
