@@ -124,6 +124,9 @@ a {
 .filter-javascript {
     filter: invert(85%) sepia(55%) saturate(840%) hue-rotate(341deg) brightness(106%) contrast(94%);
 }
+.filter-typescript {
+    filter: invert(40%) sepia(50%) saturate(1412%) hue-rotate(182deg) brightness(88%) contrast(80%);
+}
 .filter-bootstrap {
     filter: invert(38%) sepia(8%) saturate(4911%) hue-rotate(224deg) brightness(91%) contrast(83%);
 }

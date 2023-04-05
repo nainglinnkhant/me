@@ -7,6 +7,7 @@ const techs = [
     'Bootstrap',
     'TailwindCSS',
     'JavaScript',
+    'TypeScript',
     'Vue',
     'React',
     'React-Native',
