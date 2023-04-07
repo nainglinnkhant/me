@@ -112,12 +112,6 @@ a {
         transform: translateX(0%);
     }
 }
-.filter-html5 {
-    filter: invert(61%) sepia(72%) saturate(6508%) hue-rotate(348deg) brightness(93%) contrast(91%);
-}
-.filter-css3 {
-    filter: invert(34%) sepia(79%) saturate(837%) hue-rotate(171deg) brightness(94%) contrast(95%);
-}
 .filter-sass {
     filter: invert(52%) sepia(30%) saturate(864%) hue-rotate(277deg) brightness(91%) contrast(84%);
 }
@@ -127,10 +121,7 @@ a {
 .filter-typescript {
     filter: invert(40%) sepia(50%) saturate(1412%) hue-rotate(182deg) brightness(88%) contrast(80%);
 }
-.filter-bootstrap {
-    filter: invert(38%) sepia(8%) saturate(4911%) hue-rotate(224deg) brightness(91%) contrast(83%);
-}
-.filter-tailwindcss {
+.filter-tailwind-css {
     filter: invert(59%) sepia(77%) saturate(3401%) hue-rotate(151deg) brightness(99%) contrast(95%);
 }
 .filter-react {
