@@ -9,7 +9,11 @@ import DocumentHead from '../components/Layout/DocumentHead'
 export default function Home({ techs }) {
     return (
         <>
-            <DocumentHead title='Naing Linn Khant' content='Naing Linn Khant' />
+            <DocumentHead
+                title='Naing Linn Khant - Software Developer'
+                description='A passionate Software Developer who loves writing sleek, reusable codes and crafting optimized, scalable websites.'
+                url='https://nainglinnkhant.vercel.app/'
+            />
 
             <main className='wrapper'>
                 <Landing />

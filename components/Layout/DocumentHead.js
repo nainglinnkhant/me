@@ -1,14 +1,32 @@
 import Head from 'next/head'
 import { useTheme } from '../../context/ThemeContext'
 
-export default function DocumentHead({ title, content }) {
+const IMAGE =
+    'https://nainglinnkhant.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprogrammer.e0334b76.svg&w=3840&q=75'
+
+export default function DocumentHead({ title, description, image = IMAGE, url }) {
     const { theme } = useTheme()
 
     return (
         <Head>
+            <meta name='twitter:card' content='summary' />
+            <meta name='twitter:title' content={title} />
+            <meta name='twitter:description' content={description} />
+            <meta name='twitter:url' content={url} />
+            <meta name='twitter:creator' content='@nainglk' />
+
+            <meta property='og:type' content='website' />
+            <meta property='og:title' content={title} />
+            <meta property='og:description' content={description} />
+            <meta property='og:image' content={image} />
+            <meta property='og:image:width' content='1200' />
+            <meta property='og:image:height' content='630' />
+            <meta property='og:url' content={url} />
+            <meta property='og:site_name' content='Naing Linn Khant - Software Developer' />
+
             <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
-            <meta name='description' content={content} />
+            <meta name='description' content={description} />
             <meta
                 name='theme-color'
                 content={theme === 'light' ? 'rgb(249 250 251)' : 'rgb(20, 27, 31)'}

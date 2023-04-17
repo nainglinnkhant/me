@@ -53,8 +53,9 @@ export default function Projects() {
     return (
         <>
             <DocumentHead
-                title='Projects | Naing Linn Khant'
-                content='Some things Naing Linn Khant have built'
+                title='Projects | Naing Linn Khant - Software Developer'
+                description='Some things Naing Linn Khant have crafted'
+                url='https://nainglinnkhant.vercel.app/projects'
             />
 
             <div className='wrapper'>

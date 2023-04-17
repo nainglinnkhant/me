@@ -10,13 +10,6 @@ class MyDocument extends Document {
         return (
             <Html lang='en'>
                 <Head>
-                    <meta property='og:title' content='Naing Linn Khant | Frontend Developer' />
-                    <meta property='og:type' content='website' />
-                    <meta property='og:url' content='https://nainglinnkhant.vercel.app/' />
-                    <meta
-                        property='og:image'
-                        content='https://nainglinnkhant.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprogrammer.e0334b76.svg&w=3840&q=75'
-                    />
                     <link
                         rel='stylesheet'
                         href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
