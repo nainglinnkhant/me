@@ -9,25 +9,39 @@ const ThemeContext = createContext({
 
 export const useTheme = () => useContext(ThemeContext)
 
+const MATCH_DARK = '(prefers-color-scheme: dark)'
+
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useLocalStorage('theme', 'light')
+    const isDarkMode = matchMedia(MATCH_DARK).matches
+    const systemTheme = isDarkMode ? 'dark' : 'light'
+    const [theme, setTheme] = useLocalStorage('theme', systemTheme)
+
+    const changeTheme = (newTheme) => {
+        setTheme(newTheme)
+        document.documentElement.classList = ''
+        document.documentElement.classList.add(newTheme)
+    }
+
+    // initialize theme with the system theme or the exisiting theme in the local storage
+    useEffect(() => {
+        changeTheme(theme)
+    }, [])
 
     useEffect(() => {
-        if (
-            theme === 'dark' ||
-            (!('nainglinnkhant-theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
+        const handleThemeChange = (e) => {
+            const changedTheme = e.matches ? 'dark' : 'light'
+            changeTheme(changedTheme)
         }
-    }, [theme])
+
+        window.matchMedia(MATCH_DARK).addEventListener('change', handleThemeChange)
+
+        return () => window.matchMedia(MATCH_DARK).removeEventListener('change', handleThemeChange)
+    }, [])
 
     const contextValue = {
         theme,
-        changeToLightTheme: () => setTheme('light'),
-        changeToDarkTheme: () => setTheme('dark'),
+        changeToLightTheme: () => changeTheme('light'),
+        changeToDarkTheme: () => changeTheme('dark'),
     }
 
     return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>

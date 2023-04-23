@@ -4,18 +4,10 @@ const PREFIX = 'nainglinnkhant-'
 
 const useLocalStorage = (key, initialValue) => {
     const prefixedKey = PREFIX + key
+    const jsonData = localStorage.getItem(prefixedKey)
+    const existingData = jsonData && JSON.parse(jsonData)
 
-    const [value, setValue] = useState('light')
-
-    useEffect(() => {
-        setValue(() => {
-            const jsonData = localStorage.getItem(prefixedKey)
-
-            if (jsonData !== null) return JSON.parse(jsonData)
-
-            return initialValue
-        })
-    }, [prefixedKey])
+    const [value, setValue] = useState(existingData ?? initialValue)
 
     useEffect(() => {
         localStorage.setItem(prefixedKey, JSON.stringify(value))
