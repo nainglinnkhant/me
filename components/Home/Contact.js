@@ -5,7 +5,7 @@ import linkedin from '../../public/social/linkedin.svg'
 
 export default function Contact() {
     return (
-        <div className='mb-36 flex flex-col justify-center items-center' data-aos='fade-up'>
+        <section className='mb-36 flex flex-col justify-center items-center' data-aos='fade-up'>
             <h2 className='section-heading'>Get in Touch</h2>
 
             <p className='paragraph mb-8 text-center'>
@@ -43,6 +43,6 @@ export default function Contact() {
                     alt='My Linkedin Profile'
                 />
             </div>
-        </div>
+        </section>
     )
 }

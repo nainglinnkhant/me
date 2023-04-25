@@ -32,7 +32,7 @@ const projects = [
 
 export default function FeaturedProjects() {
     return (
-        <div className={`${styles['featured-projects']} mb-36`}>
+        <section className={`${styles['featured-projects']} mb-36`}>
             <h2 className='section-heading' data-aos='fade-up'>
                 Featured Projects
             </h2>
@@ -95,6 +95,6 @@ export default function FeaturedProjects() {
                     <i className='ml-2 fas fa-chevron-right'></i>
                 </span>
             </div>
-        </div>
+        </section>
     )
 }

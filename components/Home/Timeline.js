@@ -38,7 +38,7 @@ const timeline = [
 
 export default function Timeline() {
     return (
-        <div className={`${styles.timeline} mb-36`} data-aos='fade-up'>
+        <section className={`${styles.timeline} mb-36`} data-aos='fade-up'>
             <h2 className='section-heading'>Timeline</h2>
 
             <div className='flex justify-center'>
@@ -69,6 +69,6 @@ export default function Timeline() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

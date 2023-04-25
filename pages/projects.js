@@ -58,13 +58,13 @@ export default function Projects() {
                 url='https://nainglinnkhant.vercel.app/projects'
             />
 
-            <div className='wrapper'>
+            <main className='wrapper'>
                 <div className='projects grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 py-28 md:py-32'>
                     {projects.map((project) => (
                         <Project project={project} key={project.name} />
                     ))}
                 </div>
-            </div>
+            </main>
         </>
     )
 }

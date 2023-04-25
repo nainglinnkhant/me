@@ -4,7 +4,7 @@ import programmer from '../../public/general/programmer.svg'
 
 export default function About() {
     return (
-        <div className={`${styles.about} mt-16 mb-36`} data-aos='fade-up'>
+        <section className={`${styles.about} mt-16 mb-36`} data-aos='fade-up'>
             <h2 className='section-heading'>About Me</h2>
 
             <div className='flex flex-wrap gap-y-10 justify-center items-center'>
@@ -20,6 +20,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

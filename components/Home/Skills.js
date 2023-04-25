@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Skills({ techs }) {
     return (
-        <div className='mb-36' data-aos='fade-up'>
+        <section className='mb-36' data-aos='fade-up'>
             <h2 className='section-heading'>Technical Skills</h2>
 
             <p className='paragraph text-center mb-8'>Technologies I have had experience with:</p>
@@ -24,6 +24,6 @@ export default function Skills({ techs }) {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }

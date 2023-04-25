@@ -7,7 +7,7 @@ export default function Landing() {
     const { theme } = useTheme()
 
     return (
-        <div
+        <section
             className={`${styles.landing} relative flex flex-col justify-center items-start h-screen-90 w-full`}
         >
             <h1 className='mb-5'>Hello, My name is Naing Linn Khant.</h1>
@@ -37,6 +37,6 @@ export default function Landing() {
                     className={theme === 'dark' ? 'icon-filter-dark' : ''}
                 />
             </div>
-        </div>
+        </section>
     )
 }
