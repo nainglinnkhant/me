@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import { useTheme } from '../../context/ThemeContext'
 
-const IMAGE =
-    'https://nainglinnkhant.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprogrammer.e0334b76.svg&w=3840&q=75'
+const IMAGE = 'https://avatars.githubusercontent.com/u/76158995?v=4'
 
 export default function DocumentHead({ title, description, image = IMAGE, url }) {
     const { theme } = useTheme()
