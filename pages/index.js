@@ -29,7 +29,12 @@ export default function Home({ techs }) {
 
 export const getStaticProps = async () => {
     const res = await fetch(`${process.env.NEXT_APP_FIREBASE_URL}/techs.json`)
-    const techs = (await res.json()) ?? []
+    let techs
+    if (!res.ok) {
+        techs = []
+    } else {
+        techs = (await res.json()) ?? []
+    }
 
     return {
         props: {

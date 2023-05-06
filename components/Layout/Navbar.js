@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CSSTransition } from 'react-transition-group'
 import NavItem from '../Base/NavItem'
@@ -7,6 +8,7 @@ import styles from '../../styles/Navbar.module.css'
 
 export default function Navbar() {
     const [showMobileMenu, setShowMobileMenu] = useState(false)
+    const [avatar, setAvatar] = useState('')
 
     const handleMobileMenuClick = () => {
         document.querySelector('.menu-btn').classList.toggle('open')
@@ -18,12 +20,40 @@ export default function Navbar() {
         setShowMobileMenu(false)
     }
 
+    useEffect(() => {
+        const getGitHubProfile = async () => {
+            try {
+                const res = await fetch('https://api.github.com/users/nainglinnkhant')
+                if (!res.ok) {
+                    throw new Error(res.message)
+                }
+
+                const data = await res.json()
+                setAvatar(data.avatar_url)
+            } catch (err) {
+                setAvatar('https://avatars.githubusercontent.com/u/76158995?v=4')
+            }
+        }
+
+        getGitHubProfile()
+    }, [])
+
     return (
         <nav className='fixed top-0 left-0 right-0 py-5 md:py-7 theme z-40'>
             <div className='container mx-auto px-8 lg:px-24 xl:px-32 2xl:px-56 flex justify-between'>
-                <div className={`${styles.name} font-semibold text-lg`}>
-                    <Link href='/'>Naing Linn Khant</Link>
-                </div>
+                <Link href='/' passHref>
+                    <a className='w-[40px] h-[40px] flex justify-center items-center bg-white rounded-full shadow-md translate-y-[-5px]'>
+                        {avatar && (
+                            <Image
+                                src={avatar}
+                                alt="Naing Linn Khant's GitHub Avatar"
+                                width={35}
+                                height={35}
+                                className='rounded-full'
+                            />
+                        )}
+                    </a>
+                </Link>
 
                 <div className={`${styles['menu-btn']} block md:hidden z-20`}>
                     <div className='menu-btn' onClick={handleMobileMenuClick}>
