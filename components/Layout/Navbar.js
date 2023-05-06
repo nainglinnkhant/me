@@ -55,7 +55,7 @@ export default function Navbar() {
                     </a>
                 </Link>
 
-                <div className={`${styles['menu-btn']} block md:hidden z-20`}>
+                <div className={`${styles['menu-btn']} block md:hidden z-20 mt-[5px]`}>
                     <div className='menu-btn' onClick={handleMobileMenuClick}>
                         <div className='menu-btn__burger dark:bg-gray-200 dark:before:bg-gray-200 dark:after:bg-gray-200'></div>
                     </div>
