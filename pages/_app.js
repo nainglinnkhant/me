@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { ThemeProvider } from '../context/ThemeContext'
@@ -39,6 +40,8 @@ function MyApp({ Component, pageProps }) {
             )}
 
             {showSpinner && <Spinner />}
+
+            <Analytics />
         </>
     )
 }
