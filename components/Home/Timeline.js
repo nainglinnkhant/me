@@ -12,12 +12,12 @@ const timeline = [
         icon: 'fas fa-graduation-cap',
     },
     {
-        description: 'Software Engineer at MO',
+        description: 'Software Developer at MO',
         time: 'Feb 2022 - Jan 2023',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='font-semibold mb-2'>
-                Software Engineer at&nbsp;
+                Software Developer at&nbsp;
                 <a
                     href='https://www.mo.com.mm/'
                     style={{ color: '#4cb849' }}
@@ -31,8 +31,26 @@ const timeline = [
     },
     {
         description: 'Frontend Developer at Idea Offshore',
-        time: 'Feb 2023 - Present',
+        time: 'Feb 2023 - Apr 2023',
         icon: 'fas fa-solid fa-briefcase',
+    },
+    {
+        description: 'Frontend Developer at ThitsaWorks',
+        time: 'Apr 2023 - Present',
+        icon: 'fas fa-solid fa-briefcase',
+        content: () => (
+            <h3 className='font-semibold mb-2'>
+                Frontend Developer at&nbsp;
+                <a
+                    href='https://www.thitsaworks.com/'
+                    style={{ color: '#6d93cb' }}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    ThitsaWorks
+                </a>
+            </h3>
+        ),
     },
 ]
 
