@@ -5,7 +5,7 @@ import Tooltip from './Tooltip'
 const GitHubAvatar = ({ avatar }) => {
     return (
         <Link href='/' passHref>
-            <a className='w-[40px] h-[40px] flex justify-center items-center bg-white rounded-full shadow-md translate-y-[-5px]'>
+            <a className='flex h-[42px] w-[42px] translate-y-[-5px] items-center justify-center rounded-full bg-white shadow-md before:absolute before:z-[-10] before:h-[40px] before:w-[40px] before:animate-[spin_3s_linear_infinite] before:rounded-full before:bg-[length:300%] before:content-[""] before:[background:linear-gradient(45deg,#e4e4e7,#e4e4e7,#e4e4e7,#e4e4e7,#a1a1aa,#52525b)]'>
                 <Avatar.Root>
                     <Tooltip content="Naing Linn Khant's GitHub Avatar" sideOffset={7}>
                         <Avatar.Image
@@ -17,7 +17,9 @@ const GitHubAvatar = ({ avatar }) => {
                         />
                     </Tooltip>
 
-                    <Avatar.Fallback>NK</Avatar.Fallback>
+                    <Avatar.Fallback className='flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white'>
+                        NK
+                    </Avatar.Fallback>
                 </Avatar.Root>
             </a>
         </Link>
