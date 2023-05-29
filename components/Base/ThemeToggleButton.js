@@ -6,12 +6,12 @@ export default function ThemeToggleButton() {
     return (
         <>
             {theme === 'light' && (
-                <button onClick={changeToDarkTheme}>
+                <button onClick={changeToDarkTheme} aria-label='Switch to dark theme'>
                     <i className='fas fa-moon'></i>
                 </button>
             )}
             {theme === 'dark' && (
-                <button onClick={changeToLightTheme}>
+                <button onClick={changeToLightTheme} aria-label='Switch to light theme'>
                     <i className='fas fa-sun'></i>
                 </button>
             )}
