@@ -8,7 +8,7 @@ export default function Project({ project }) {
         <div className='shadow-md dark:shadow-md-dark'>
             <a href={project.link} target='__blank' rel='noopener noreferrer'>
                 <div className='relative'>
-                    <div className='absolute w-full h-full bg-dark opacity-20 dark:z-10 dark:hover:bg-transparent transition-all duration-500 ease-in-out'></div>
+                    <div className='absolute h-full w-full bg-dark opacity-20 transition-all duration-500 ease-in-out dark:z-10 dark:hover:bg-transparent'></div>
 
                     <Image src={project.image} alt={project.name} layout='responsive' priority />
                 </div>
@@ -16,14 +16,14 @@ export default function Project({ project }) {
 
             <div className='px-8 py-5'>
                 <a href={project.link} target='__blank' rel='noopener noreferrer'>
-                    <h3 className='inline-block font-medium mb-2'>{project.name}</h3>
+                    <h3 className='mb-2 inline-block font-medium'>{project.name}</h3>
                 </a>
 
                 <p className='mb-4 text-sm'>{project.description}</p>
 
                 <ul className='mb-4'>
                     {project.techs.map((tech) => (
-                        <li className='inline-block mr-4 text-secondary text-sm' key={tech}>
+                        <li className='text-secondary mr-4 inline-block text-sm' key={tech}>
                             {tech}
                         </li>
                     ))}

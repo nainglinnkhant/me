@@ -39,11 +39,11 @@ export default function Navbar() {
     }, [])
 
     return (
-        <nav className='fixed top-0 left-0 right-0 py-5 md:py-7 theme z-40'>
-            <div className='container mx-auto px-8 lg:px-24 xl:px-32 2xl:px-56 flex justify-between'>
+        <nav className='theme fixed left-0 right-0 top-0 z-40 py-5 md:py-7'>
+            <div className='container mx-auto flex justify-between px-8 lg:px-24 xl:px-32 2xl:px-56'>
                 <GitHubAvatar avatar={avatar} />
 
-                <div className={`${styles['menu-btn']} block md:hidden z-20 mt-[5px]`}>
+                <div className={`${styles['menu-btn']} z-20 mt-[5px] block md:hidden`}>
                     <div className='menu-btn' onClick={handleMobileMenuClick}>
                         <div className='menu-btn__burger dark:bg-gray-200 dark:before:bg-gray-200 dark:after:bg-gray-200'></div>
                     </div>
@@ -57,9 +57,9 @@ export default function Navbar() {
                     unmountOnExit
                 >
                     <nav
-                        className={`${styles['menu-mobile']} theme absolute top-0 right-0 bottom-0 left-0 w-100 h-screen z-10`}
+                        className={`${styles['menu-mobile']} theme w-100 absolute bottom-0 left-0 right-0 top-0 z-10 h-screen`}
                     >
-                        <ul className='text-center pt-40'>
+                        <ul className='pt-40 text-center'>
                             <NavItem path='/' closeMobileMenu={closeMobileMenu} mobile>
                                 <Link href='/'>Home</Link>
                             </NavItem>

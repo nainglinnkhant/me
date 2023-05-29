@@ -5,7 +5,7 @@ import linkedin from '../../public/social/linkedin.svg'
 
 export default function Contact() {
     return (
-        <section className='mb-36 flex flex-col justify-center items-center' data-aos='fade-up'>
+        <section className='mb-36 flex flex-col items-center justify-center' data-aos='fade-up'>
             <h2 className='section-heading'>Get in Touch</h2>
 
             <p className='paragraph mb-8 text-center'>
@@ -21,7 +21,7 @@ export default function Contact() {
                 Say Hello
             </a>
 
-            <div className='flex justify-center items-center mt-10'>
+            <div className='mt-10 flex items-center justify-center'>
                 <IconLink
                     link='https://github.com/nainglinnkhant'
                     linkClass='mx-3'

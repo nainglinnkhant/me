@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Article({ article }) {
     return (
-        <div className='w-full md:w-3/4 py-8 border-b dark:border-gray-700'>
+        <div className='w-full border-b py-8 dark:border-gray-700 md:w-3/4'>
             <h3 className='article-heading mb-4'>
                 <Link href={`/blog/${article.slug}`}>{article.name}</Link>
             </h3>

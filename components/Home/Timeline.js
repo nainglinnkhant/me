@@ -16,7 +16,7 @@ const timeline = [
         time: 'Feb 2022 - Jan 2023',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
-            <h3 className='font-semibold mb-2'>
+            <h3 className='mb-2 font-semibold'>
                 Software Developer at&nbsp;
                 <a
                     href='https://www.mo.com.mm/'
@@ -39,7 +39,7 @@ const timeline = [
         time: 'Apr 2023 - Present',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
-            <h3 className='font-semibold mb-2'>
+            <h3 className='mb-2 font-semibold'>
                 Frontend Developer at&nbsp;
                 <a
                     href='https://www.thitsaworks.com/'
@@ -60,14 +60,14 @@ export default function Timeline() {
             <h2 className='section-heading'>Timeline</h2>
 
             <div className='flex justify-center'>
-                <div className='w-4/5 lg:w-3/4 relative'>
+                <div className='relative w-4/5 lg:w-3/4'>
                     <div className={`${styles['center-line']} bg-black dark:bg-gray-200`}></div>
 
                     {timeline.map((el, index) => (
                         <div
                             className={`${
                                 styles[`${index % 2 === 0 ? 'left' : 'right'}`]
-                            } lg:mx-10 mt-10`}
+                            } mt-10 lg:mx-10`}
                             key={index}
                         >
                             <div
@@ -78,7 +78,7 @@ export default function Timeline() {
                                 {el.content && typeof el.content === 'function' ? (
                                     el.content()
                                 ) : (
-                                    <h3 className='font-semibold mb-2'>{el.description}</h3>
+                                    <h3 className='mb-2 font-semibold'>{el.description}</h3>
                                 )}
 
                                 <p className='text-secondary'>{el.time}</p>

@@ -8,7 +8,7 @@ export default function Landing() {
 
     return (
         <section
-            className={`${styles.landing} relative flex flex-col justify-center items-start h-screen-90 w-full`}
+            className={`${styles.landing} relative flex h-screen-90 w-full flex-col items-start justify-center`}
         >
             <h1 className='mb-5'>Hello, My name is Naing Linn Khant.</h1>
 
@@ -28,7 +28,7 @@ export default function Landing() {
                 Resume
             </a>
 
-            <div className={`${styles['chevrons-down']} self-center absolute bottom-0`}>
+            <div className={`${styles['chevrons-down']} absolute bottom-0 self-center`}>
                 <Image
                     src={chevronsDown}
                     alt='Chevrons down'

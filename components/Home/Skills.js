@@ -5,12 +5,12 @@ export default function Skills({ techs }) {
         <section className='mb-36' data-aos='fade-up'>
             <h2 className='section-heading'>Technical Skills</h2>
 
-            <p className='paragraph text-center mb-8'>Technologies I have had experience with:</p>
+            <p className='paragraph mb-8 text-center'>Technologies I have had experience with:</p>
 
-            <div className='flex flex-wrap gap-6 justify-center items-center'>
+            <div className='flex flex-wrap items-center justify-center gap-6'>
                 {techs.map((tech) => (
                     <div
-                        className='text-center rounded-full w-32 h-32 flex flex-col justify-center items-center shadow-neuro-inset dark:shadow-neuro-inset-dark'
+                        className='flex h-32 w-32 flex-col items-center justify-center rounded-full text-center shadow-neuro-inset dark:shadow-neuro-inset-dark'
                         key={tech.slug}
                     >
                         <Image
@@ -20,7 +20,7 @@ export default function Skills({ techs }) {
                             height='37px'
                             className={`filter-${tech.slug}`}
                         />
-                        <p className='mt-1 text-secondary'>{tech.name}</p>
+                        <p className='text-secondary mt-1'>{tech.name}</p>
                     </div>
                 ))}
             </div>

@@ -43,12 +43,12 @@ export default function FeaturedProjects() {
 
             {projects.map((project, index) => (
                 <div
-                    className='flex flex-wrap gap-y-5 items-center mt-16'
+                    className='mt-16 flex flex-wrap items-center gap-y-5'
                     key={project.name}
                     data-aos='fade-up'
                 >
                     <div
-                        className={`flex basis-full md:basis-3/5 items-center ${
+                        className={`flex basis-full items-center md:basis-3/5 ${
                             index % 2 === 0 ? 'md:order-1' : 'md:order-2'
                         }`}
                     >
@@ -70,7 +70,7 @@ export default function FeaturedProjects() {
                         }`}
                     >
                         <a href={project.link} target='__blank' rel='noopener noreferrer'>
-                            <h3 className='text-lg font-semibold inline-block'>{project.name}</h3>
+                            <h3 className='inline-block text-lg font-semibold'>{project.name}</h3>
                         </a>
 
                         <p className='paragraph my-5'>{project.description}</p>
@@ -90,9 +90,9 @@ export default function FeaturedProjects() {
             ))}
 
             <div className='flex justify-center' data-aos='fade-up'>
-                <span className='flex items-center mt-10 btn cursor-pointer'>
+                <span className='btn mt-10 flex cursor-pointer items-center'>
                     <Link href='/projects'>See More</Link>
-                    <i className='ml-2 fas fa-chevron-right'></i>
+                    <i className='fas fa-chevron-right ml-2'></i>
                 </span>
             </div>
         </section>

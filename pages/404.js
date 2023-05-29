@@ -8,7 +8,7 @@ export default function NotFound() {
             <DocumentHead title='Page Not Found | Naing Linn Khant' content='Page Not Found!' />
 
             <main className='wrapper'>
-                <div className='flex flex-col justify-center items-center w-full h-screen'>
+                <div className='flex h-screen w-full flex-col items-center justify-center'>
                     <Image src={pageNotFound} width='400px' height='400px' alt='Page Not Found' />
 
                     <h2 className='text-xl font-semibold'>Page Not Found!</h2>

@@ -59,7 +59,7 @@ export default function Projects() {
             />
 
             <main className='wrapper'>
-                <div className='projects grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 py-28 md:py-32'>
+                <div className='projects grid grid-cols-1 gap-8 py-28 md:grid-cols-2 md:py-32 2xl:grid-cols-3'>
                     {projects.map((project) => (
                         <Project project={project} key={project.name} />
                     ))}

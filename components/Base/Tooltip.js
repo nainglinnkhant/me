@@ -8,7 +8,7 @@ const Tooltip = ({ children, content, ...props }) => {
 
                 <TooltipPrimitive.Portal>
                     <TooltipPrimitive.Content
-                        className='ml-4 z-50 text-xs bg-white rounded shadow-md px-2.5 py-2 text-slate-600 select-none'
+                        className='z-50 ml-4 select-none rounded bg-white px-2.5 py-2 text-xs text-slate-600 shadow-md'
                         {...props}
                     >
                         {content}
