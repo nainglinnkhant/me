@@ -5,7 +5,10 @@ import { getAllArticles } from '../../lib/mdx'
 export default function blog({ articles }) {
     return (
         <>
-            <DocumentHead title='Blog | Naing Linn Khant' content="Naing Linn Khant's Blog" />
+            <DocumentHead
+                title='Blog | Naing Linn Khant'
+                description='The things Naing Linn Khant has written so far'
+            />
 
             <div className='wrapper'>
                 <div className='flex flex-col items-center py-20 md:py-24'>

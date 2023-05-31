@@ -5,7 +5,7 @@ import pageNotFound from '../public/general/page-not-found.svg'
 export default function NotFound() {
     return (
         <>
-            <DocumentHead title='Page Not Found | Naing Linn Khant' content='Page Not Found!' />
+            <DocumentHead title='Page Not Found | Naing Linn Khant' description='Page Not Found!' />
 
             <main className='wrapper'>
                 <div className='flex h-screen w-full flex-col items-center justify-center'>
