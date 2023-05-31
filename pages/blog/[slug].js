@@ -1,41 +1,35 @@
-import { useCallback, useEffect, useState } from 'react'
+import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeHighlight from 'rehype-highlight'
+import dateFormat from 'dateformat'
 import DocumentHead from '../../components/Layout/DocumentHead'
-import articles from '../../articles-test.json'
+import useScrolled from '../../hooks/useScrolled'
+import { getArticleSlugs, getArticleBySlug } from '../../lib/mdx'
+import 'highlight.js/styles/base16/material.css'
 
 export default function ArticleDetails({ article }) {
-    const [scrolled, setScrolled] = useState(0)
-
-    const handleProgressOnScroll = useCallback(() => {
-        const windowScroll = document.body.scrollTop || document.documentElement.scrollTop
-
-        const windowHeight =
-            document.documentElement.scrollHeight - document.documentElement.clientHeight
-
-        const scrolledAmount = `${(windowScroll / windowHeight) * 100}%`
-        setScrolled(scrolledAmount)
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleProgressOnScroll)
-
-        return () => window.removeEventListener('scroll', handleProgressOnScroll)
-    }, [handleProgressOnScroll])
+    const { scrolled } = useScrolled()
 
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
+    const { frontmatter, source } = article
+
     return (
         <>
-            <DocumentHead title={article.name} content={article.name} />
+            <DocumentHead title={frontmatter.title} description={frontmatter.description} />
 
             <div
-                className='fixed top-0 left-0 bg-gray-700 dark:bg-gray-300 z-50'
+                className='fixed left-0 top-0 z-50 bg-gray-700 dark:bg-gray-300'
                 style={{ height: '3px', width: scrolled }}
             ></div>
 
             <button
-                className='fixed bottom-10 right-10 text-lg bg-gray-200 dark:bg-gray-800 shadow rounded px-3 py-1'
+                className='fixed bottom-10 right-10 rounded bg-gray-200 px-3 py-1 text-lg shadow dark:bg-gray-800'
                 onClick={handleScrollToTop}
             >
                 <i className='fas fa-chevron-up'></i>
@@ -44,21 +38,17 @@ export default function ArticleDetails({ article }) {
             <div className='wrapper'>
                 <div className='flex flex-col items-center py-24 md:py-28'>
                     <div className='w-full md:w-3/4'>
-                        <h2 className='article-heading mb-4'>{article.name}</h2>
+                        <h2 className='article-heading mb-4'>{frontmatter.title}</h2>
 
-                        <div className='text-secondary mb-10'>
-                            <span className='mr-4'>{article.date}</span>
-                            <span>#{article.category}</span>
+                        <div className='mb-10 text-zinc-500'>
+                            <span>{dateFormat(frontmatter.publishedAt, 'd mmm, yyyy')}</span>
+                            <span className='mx-2'>·</span>
+                            <span>{frontmatter.readingTime?.text}</span>
                         </div>
 
-                        {article.content.split('<br>').map((paragraph, index) => (
-                            <p
-                                className='paragraph text-gray-700 dark:text-gray-300 mb-8'
-                                key={index}
-                            >
-                                {paragraph}
-                            </p>
-                        ))}
+                        <div className='prose dark:prose-invert'>
+                            <MDXRemote {...source} components={[]} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,23 +57,34 @@ export default function ArticleDetails({ article }) {
 }
 
 export const getStaticPaths = async () => {
+    const slugs = await getArticleSlugs()
+
     return {
         fallback: false,
-        paths: articles.map((article) => ({
+        paths: slugs.map((slug) => ({
             params: {
-                slug: article.slug,
+                slug,
             },
         })),
     }
 }
 
-export const getStaticProps = (context) => {
+export const getStaticProps = async (context) => {
     const { slug } = context.params
-    const article = articles.find((article) => article.slug === slug)
+    const { frontmatter, content } = getArticleBySlug(slug)
+    const mdxSource = await serialize(content, {
+        mdxOptions: {
+            remarkPlugins: [remarkGfm],
+            rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings], rehypeHighlight],
+        },
+    })
 
     return {
         props: {
-            article,
+            article: {
+                frontmatter,
+                source: mdxSource,
+            },
         },
         revalidate: 10,
     }
