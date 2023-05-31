@@ -21,7 +21,10 @@ export default function ArticleDetails({ article }) {
 
     return (
         <>
-            <DocumentHead title={frontmatter.title} description={frontmatter.description} />
+            <DocumentHead
+                title={`${frontmatter.title} - Naing Linn Khant`}
+                description={frontmatter.description}
+            />
 
             <div
                 className='fixed left-0 top-0 z-50 bg-gray-700 dark:bg-gray-300'

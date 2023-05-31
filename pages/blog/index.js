@@ -8,6 +8,7 @@ export default function blog({ articles }) {
             <DocumentHead
                 title='Blog | Naing Linn Khant'
                 description='The things Naing Linn Khant has written so far'
+                url='https://nainglinnkhant.vercel.app/blog'
             />
 
             <div className='wrapper'>
