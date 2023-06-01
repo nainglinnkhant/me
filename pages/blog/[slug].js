@@ -44,7 +44,8 @@ export default function ArticleDetails({ article }) {
             ></div>
 
             <button
-                className='fixed bottom-10 right-10 rounded bg-gray-200 px-3 py-1 text-lg shadow dark:bg-gray-800'
+                aria-label='Scroll to top'
+                className='fixed bottom-10 right-10 rounded bg-gray-200 px-3 py-1 text-lg text-zinc-800 shadow transition-colors duration-300 ease-out hover:text-zinc-400 dark:bg-gray-800'
                 onClick={handleScrollToTop}
             >
                 <i className='fas fa-chevron-up'></i>
@@ -52,7 +53,7 @@ export default function ArticleDetails({ article }) {
 
             <div className='wrapper'>
                 <div className='flex flex-col items-center py-24 md:py-28'>
-                    <div className='w-full md:w-3/4'>
+                    <article className='w-full md:w-3/4'>
                         <h2 className='article-heading mb-4'>{frontmatter.title}</h2>
 
                         <div className='mb-10 text-zinc-500'>
@@ -69,7 +70,7 @@ export default function ArticleDetails({ article }) {
                         <div className='prose dark:prose-invert'>
                             <MDXRemote {...source} />
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </>

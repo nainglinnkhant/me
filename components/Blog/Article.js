@@ -3,7 +3,7 @@ import dateFormat from 'dateformat'
 
 export default function Article({ article }) {
     return (
-        <div className='w-full border-b py-8 dark:border-gray-700 md:w-3/4'>
+        <article className='w-full border-b py-8 dark:border-gray-700 md:w-3/4'>
             <h3 className='article-heading mb-4'>
                 <Link href={`/blog/${article.slug}`}>{article.title}</Link>
             </h3>
@@ -15,6 +15,6 @@ export default function Article({ article }) {
             </div>
 
             <p className='paragraph'>{article.description}</p>
-        </div>
+        </article>
     )
 }
