@@ -9,7 +9,9 @@ export default function Article({ article }) {
             </h3>
 
             <div className='text-secondary mb-4'>
-                <span className='mr-5'>{dateFormat(article.publishedAt, 'd mmm, yyyy')}</span>
+                <span className='mr-5'>
+                    {dateFormat(article.publishedAt?.replaceAll('-', '/'), 'd mmm, yyyy')}
+                </span>
             </div>
 
             <p className='paragraph'>{article.description}</p>

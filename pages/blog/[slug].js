@@ -44,7 +44,12 @@ export default function ArticleDetails({ article }) {
                         <h2 className='article-heading mb-4'>{frontmatter.title}</h2>
 
                         <div className='mb-10 text-zinc-500'>
-                            <span>{dateFormat(frontmatter.publishedAt, 'd mmm, yyyy')}</span>
+                            <span>
+                                {dateFormat(
+                                    frontmatter.publishedAt?.replaceAll('-', '/'),
+                                    'd mmm, yyyy'
+                                )}
+                            </span>
                             <span className='mx-2'>·</span>
                             <span>{frontmatter.readingTime?.text}</span>
                         </div>
