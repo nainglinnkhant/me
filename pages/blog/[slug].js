@@ -45,7 +45,7 @@ export default function ArticleDetails({ article }) {
 
             <button
                 aria-label='Scroll to top'
-                className='fixed bottom-10 right-10 rounded bg-gray-200 px-3 py-1 text-lg text-zinc-800 shadow transition-colors duration-300 ease-out hover:text-zinc-400 dark:bg-gray-800'
+                className='fixed bottom-10 right-10 rounded bg-gray-200 px-3 py-1 text-lg text-zinc-800 shadow transition-colors duration-300 ease-out hover:text-zinc-400 dark:bg-gray-800 dark:text-zinc-50 dark:hover:text-zinc-400'
                 onClick={handleScrollToTop}
             >
                 <i className='fas fa-chevron-up'></i>
