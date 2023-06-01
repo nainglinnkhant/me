@@ -68,11 +68,11 @@ export default function Navbar() {
                                 <Link href='/projects'>Projects</Link>
                             </NavItem>
 
-                            {/* <NavItem path='/blog' closeMobileMenu={closeMobileMenu} mobile>
+                            <NavItem path='/blog' closeMobileMenu={closeMobileMenu} mobile>
                                 <Link href='/blog'>Blog</Link>
-                            </NavItem> */}
+                            </NavItem>
 
-                            <li>
+                            <li className='pt-2'>
                                 <ThemeToggleButton />
                             </li>
                         </ul>
@@ -88,9 +88,9 @@ export default function Navbar() {
                         <Link href='/projects'>Projects</Link>
                     </NavItem>
 
-                    {/* <NavItem path='/blog'>
+                    <NavItem path='/blog'>
                         <Link href='/blog'>Blog</Link>
-                    </NavItem> */}
+                    </NavItem>
 
                     <li>
                         <ThemeToggleButton />
