@@ -50,7 +50,7 @@ export default function ArticleDetails({ article }) {
                         </div>
 
                         <div className='prose dark:prose-invert'>
-                            <MDXRemote {...source} components={[]} />
+                            <MDXRemote {...source} />
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,15 @@ export const getStaticProps = async (context) => {
     const mdxSource = await serialize(content, {
         mdxOptions: {
             remarkPlugins: [remarkGfm],
-            rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings], rehypeHighlight],
+            rehypePlugins: [
+                rehypeSlug,
+                [
+                    rehypeAutolinkHeadings,
+                    { behavior: 'wrap', properties: { ariaLabel: 'heading' } },
+                ],
+                rehypeHighlight,
+            ],
+            format: 'mdx',
         },
     })
 
