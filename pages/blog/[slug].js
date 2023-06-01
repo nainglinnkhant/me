@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import remarkGfm from 'remark-gfm'
@@ -16,6 +17,17 @@ export default function ArticleDetails({ article }) {
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+
+    // This is a workaround for Next.js's anchor link bug not an optimal solution
+    const scrollToAnchor = () => {
+        const hash = window.location.hash
+        window.location.hash = ''
+        window.location.hash = hash
+    }
+
+    useEffect(() => {
+        scrollToAnchor()
+    }, [])
 
     const { frontmatter, source } = article
 

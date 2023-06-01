@@ -25,6 +25,14 @@
     text-decoration: none;
     font-weight: 800;
 }
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+    scroll-margin-top: 95px;
+}
 html,
 body {
     padding: 0;
@@ -32,14 +40,14 @@ body {
     font-family: 'Inter', sans-serif !important;
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 ::-webkit-scrollbar-thumb {
     background-color: rgb(156 163 175);
     border-radius: 5px;
-}
+} */
 a {
     text-decoration: none;
     cursor: pointer;
