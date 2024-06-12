@@ -36,7 +36,7 @@ const timeline = [
     },
     {
         description: 'Frontend Developer at ThitsaWorks',
-        time: 'Apr 2023 - Present',
+        time: 'Apr 2023 - Dec 2023',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='mb-2 font-semibold'>
@@ -48,6 +48,24 @@ const timeline = [
                     rel='noopener noreferrer'
                 >
                     ThitsaWorks
+                </a>
+            </h3>
+        ),
+    },
+    {
+        description: 'Frontend Engineer at Roofer.com',
+        time: 'Jan 2024 - Present',
+        icon: 'fas fa-solid fa-briefcase',
+        content: () => (
+            <h3 className='mb-2 font-semibold'>
+                Frontend Engineer at&nbsp;
+                <a
+                    href='https://www.roofer.com/'
+                    style={{ color: '#6E37A6' }}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    Roofer.com
                 </a>
             </h3>
         ),

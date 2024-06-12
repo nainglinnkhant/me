@@ -15,8 +15,8 @@ export default function Landing() {
             <h2 className='mb-5'>I build frontend stuffs.</h2>
 
             <p className='mb-7'>
-                I'm a software developer, who loves to craft things with JavaScript, based in
-                Yangon.
+                I'm a software developer, who loves to craft things with TypeScript, based in
+                Bangkok.
             </p>
 
             <a

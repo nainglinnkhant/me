@@ -9,7 +9,7 @@ export default function About() {
 
             <div className='flex flex-wrap items-center justify-center gap-y-10'>
                 <p className='paragraph basis-full md:basis-3/5'>
-                    A JavaScript-based developer with an inquisitive, open-minded, and responsible
+                    A TypeScript developer with an inquisitive, open-minded, and responsible
                     mentality. My excitement lies in trying out new things and applying them in
                     practical situations.
                 </p>
