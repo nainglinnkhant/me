@@ -15,16 +15,11 @@ export default function Landing() {
             <h2 className='mb-5'>I build frontend stuffs.</h2>
 
             <p className='mb-7'>
-                I'm a software developer, who loves to craft things with TypeScript, based in
+                I'm a software engineer, who loves to craft things with TypeScript, based in
                 Bangkok.
             </p>
 
-            <a
-                href='https://resume.io/r/6UrC226Gw'
-                target='__blank'
-                rel='noopener noreferrer'
-                className='btn'
-            >
+            <a href='/resume.pdf' className='btn' download='Naing Linn Khant (Resume)'>
                 Resume
             </a>
 

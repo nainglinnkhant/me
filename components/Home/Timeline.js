@@ -17,7 +17,7 @@ const timeline = [
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='mb-2 font-semibold'>
-                Software Developer at&nbsp;
+                Software Engineer at&nbsp;
                 <a
                     href='https://www.mo.com.mm/'
                     style={{ color: '#4cb849' }}
@@ -54,7 +54,7 @@ const timeline = [
     },
     {
         description: 'Frontend Engineer at Roofer.com',
-        time: 'Jan 2024 - Present',
+        time: 'Aug 2023 - Jun 2024',
         icon: 'fas fa-solid fa-briefcase',
         content: () => (
             <h3 className='mb-2 font-semibold'>
